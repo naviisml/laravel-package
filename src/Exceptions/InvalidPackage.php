@@ -1,6 +1,6 @@
 <?php
 
-namespace Naviisml\Package;
+namespace Naviisml\Package\Exceptions;
 
 use Exception;
 
