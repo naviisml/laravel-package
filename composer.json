@@ -1,0 +1,42 @@
+{
+    "name": "naviisml/laravel-package",
+    "description": "Tools for creating Laravel packages",
+    "keywords": [
+        "naviiisml",
+        "laravel",
+        "package",
+        "tools"
+    ],
+    "homepage": "https://github.com/naviisml/laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Navi Ismail",
+            "email": "contact@navel.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/contracts": "^9.28|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Naviisml\\Package\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Naviisml\\Package\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
