@@ -1,8 +1,4 @@
-# Tools for creating Laravel packages
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-package-tools)
-![Tests](https://github.com/spatie/laravel-package-tools/workflows/Tests/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-package-tools.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-package-tools)
+# Laravel Package Helper
 
 This package contains a `PackageServiceProvider` that you can use in your packages to easily register config files,
 migrations, and more.
@@ -10,10 +6,10 @@ migrations, and more.
 Here's an example of how it can be used.
 
 ```php
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
+use Naviisml\Package\PackageServiceProvider;
+use Naviisml\Package\Package;
 use MyPackage\ViewComponents\Alert;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Naviisml\Package\Commands\InstallCommand;
 
 class YourPackageServiceProvider extends PackageServiceProvider
 {
@@ -64,11 +60,11 @@ skeleton is structured perfectly to work perfectly with the `PackageServiceProvi
 
 ## Usage
 
-In your package you should let your service provider extend `Spatie\LaravelPackageTools\PackageServiceProvider`.
+In your package you should let your service provider extend `Naviisml\Package\PackageServiceProvider`.
 
 ```php
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
+use Naviisml\Package\PackageServiceProvider;
+use Naviisml\Package\Package;
 
 class YourPackageServiceProvider extends PackageServiceProvider
 {
@@ -391,9 +387,9 @@ When using Laravel Package Tools, you don't have to write an `InstallCommand` yo
 call, `hasInstallCommand` and configure it using a closure. Here's an example.
 
 ```php
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Naviisml\Package\PackageServiceProvider;
+use Naviisml\Package\Package;
+use Naviisml\Package\Commands\InstallCommand;
 
 class YourPackageServiceProvider extends PackageServiceProvider
 {
@@ -436,7 +432,7 @@ end when running `php artisan your-package-name:install`. You can use this to pe
 output.
 
 ```php
-use use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use use Naviisml\Package\Commands\InstallCommand;
 
 public function configurePackage(Package $package): void
 {
